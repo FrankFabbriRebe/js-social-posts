@@ -107,7 +107,7 @@ for (const likeButton of arrayLikeButton) {
         // Aggiungi il colore al testo del bottone
         likeButton.classList.add("color");
 
-    // Implementa la logica per incrementare il contatore dei likes
+        // Implementa la logica per incrementare il contatore dei likes
         const postId = likeButton.getAttribute("data-postid");
         // console.log(postId);
         const likeCounter = document.getElementById(`like-counter-${postId}`);
@@ -115,6 +115,14 @@ for (const likeButton of arrayLikeButton) {
         const currentLikes = parseInt(likeCounter.innerText);
         likeCounter.innerText = currentLikes + 1;
         console.log(likeCounter);
+
+        const likedPostIds = [];
+        if (!likedPostIds.includes(postId)) {
+            likedPostIds.push(postId);
+        }
+
+        // Stampa il secondo array (puoi rimuovere questo passaggio una volta che hai verificato che funziona)
+        console.log("Liked Post IDs:", likedPostIds);
                
     });
 }
