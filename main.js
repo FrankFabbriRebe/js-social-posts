@@ -97,13 +97,6 @@ posts.forEach((obj) => {
 
 });
 
-// selezione button like
-const likeButtons = document.querySelectorAll(".js-like-button");
-
-// Aggiungo un event listener a ciascun pulsante Mi Piace
-likeButtons.forEach((likeButton) => {
-    likeButton.addEventListener("click", function() {
-        // Aggiungi il colore al testo del bottone
-        likeButton.classList.add("color");
-    });
-});
+// selezione like button
+const likeButton = document.getElementsByClassName("js-like-button");
+console.log(likeButton);
