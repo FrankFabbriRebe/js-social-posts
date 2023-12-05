@@ -89,7 +89,7 @@ posts.forEach((obj) => {
                     </a>
                 </div>
                 <div class="likes__counter">
-                    Piace a <b id="like-counter-1" class="js-likes-counter">${obj.likes}</b> persone
+                    Piace a <b id="like-counter-${obj.id}" class="js-likes-counter">${obj.likes}</b> persone
                 </div>
             </div> 
         </div>            
@@ -105,6 +105,14 @@ for (const likeButton of arrayLikeButton) {
         // Aggiungi il colore al testo del bottone
         likeButton.classList.add("color");
 
-       
+    // Implementa la logica per incrementare il contatore dei likes
+        const postId = likeButton.getAttribute("data-postid");
+        // console.log(postId);
+        const likeCounter = document.getElementById(`like-counter-${postId}`);
+        // console.log(likeCounter);
+        const currentLikes = parseInt(likeCounter.innerText);
+        likeCounter.innerText = currentLikes + 1;
+        console.log(likeCounter);
+               
     });
 }
