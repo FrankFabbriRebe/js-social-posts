@@ -98,5 +98,13 @@ posts.forEach((obj) => {
 });
 
 // selezione like button
-const likeButton = document.getElementsByClassName("js-like-button");
-console.log(likeButton);
+const arrayLikeButton = document.getElementsByClassName("js-like-button");
+
+for (const likeButton of arrayLikeButton) {
+    likeButton.addEventListener("click", function() {
+        // Aggiungi il colore al testo del bottone
+        likeButton.classList.add("color");
+
+       
+    });
+}
