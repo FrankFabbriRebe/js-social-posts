@@ -102,6 +102,8 @@ const arrayLikeButton = document.getElementsByClassName("js-like-button");
 
 for (const likeButton of arrayLikeButton) {
     likeButton.addEventListener("click", function() {
+        // previene il refresh della pagina d ogni click
+        event.preventDefault(); 
         // Aggiungi il colore al testo del bottone
         likeButton.classList.add("color");
 
